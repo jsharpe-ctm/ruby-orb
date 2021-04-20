@@ -53,7 +53,7 @@ steps:
         fi
 
         if [ "<< parameters.path >>" == "./vendor/bundle" ]; then
-          BUNDLE_PATH=<<parameters.path>> bundle check || bundle install --deployment
+          BUNDLE_PATH=<<parameters.path>> bundle check || BUNDLE_DEPLOYMENT=true bundle install
         else
           BUNDLE_PATH=<<parameters.path>> bundle check || BUNDLE_PATH=<<parameters.path>> bundle install
         fi
