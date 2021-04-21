@@ -26,7 +26,7 @@ parameters:
 jobs:
   integration-tests:
     docker:
-      - image: cimg/ruby:2.7.2-node
+      - image: cimg/ruby:2.7-node
       - *postgres
     parallelism: 2
     environment:
